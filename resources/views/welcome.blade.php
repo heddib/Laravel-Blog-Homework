@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('blog') }}">Voir le blog</a>
+                    <a href="{{ route('blog.index') }}">Voir le blog</a>
                 </div>
             </div>
         </div>

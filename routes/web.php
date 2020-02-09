@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/blog', 'BlogController@index')->name('blog');
+// Blog
+Route::get('/blog', 'PostsController@index')->name('blog.index');
+Route::get('/blog/add', 'PostsController@addPost')->name('blog.add');
+Route::get('/blog/post/{slug}', 'PostsController@view')->name('blog.view');
+Route::post('/blog/store', 'PostsController@store')->name('blog.store');
+//
 
 Auth::routes();
 

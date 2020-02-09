@@ -36,4 +36,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the comments for the user.
+     */
+    public function comments() {
+        return $this->hasMany('App\Comment');
+    }
+
+    /**
+     * Get the comments for the user.
+     */
+    public function posts() {
+        return $this->hasMany('App\Post');
+    }
 }
