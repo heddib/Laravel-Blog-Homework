@@ -26,7 +26,7 @@
                     <hr>
                     @forelse($posts as $post)
                         <div class="col-lg-4 col-md-6">
-                            {{ $post->title }}
+                            #{{ $post->id }} {{ $post->title }} par {{ App\User::find($post->user_id)->name }}
                         </div>
                     @empty
                         <div class="col-lg-12 col-md-12">
